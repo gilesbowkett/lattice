@@ -10,9 +10,9 @@ def display_grid
   puts
 end
 
-while true
-  display_grid
+display_grid
 
+while true
   # ball choose/drop UI
   puts "new number: #{number = rand(7) + 1}" # zero-indexed
   print "column number to drop into? "
