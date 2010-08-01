@@ -22,7 +22,6 @@ while true
   @grid.insert(Ball.new(number), column)
   display_grid
 
-  # to be implemented
   while(@grid.explode!)
     3.times {puts "              KABOOM!!!"}
     display_grid
