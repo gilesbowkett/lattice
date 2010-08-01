@@ -1,0 +1,80 @@
+#container {
+  width: 851px;
+  font-family: "Futura", "Gill Sans", "Helvetica", sans-serif;
+}
+
+#main {
+  width: 580px;
+}
+
+#sidebar {
+  float: right;
+}
+
+div#scoreboard {
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  padding-right: 15px;
+  color: black;
+  text-align: right;
+}
+
+table, tr, td {
+  border: 0;
+  border-spacing: 0;
+}
+
+.game_board {
+  background-color: black;
+  border-width: 1px;
+  border-style: dashed; 
+  border-color: #333;
+  border-spacing: 1px;
+}
+
+.pending_zone {
+  background-color: #333;
+}
+
+.tile_space {
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  color: white;
+  font-family: "Futura", "Gill Sans", "Helvetica", sans-serif;
+  font-size: 36px;
+}
+
+.tile_number {
+  position: relative;
+}
+
+.seven {
+  color: red;
+}
+
+.six {
+  color: orange;
+}
+
+.five {
+  color: green;
+}
+
+.four {
+  color: blue;
+}
+
+.three {
+  color: purple;
+}
+
+.two {
+  color: yellow;
+}
+
+.one {
+  color: #ff1493;
+}
