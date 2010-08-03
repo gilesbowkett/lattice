@@ -1,0 +1,306 @@
+<html>
+  <head>
+    <link href='dropX.css' media='screen' rel='stylesheet' type='text/css' />
+    <script src='jquery-1.4.2.min.js' type='text/javascript'></script>
+    <script src='dropX.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='sidebar'>
+        <div id='scoreboard'>
+          2,328,235
+        </div>
+        <div id='countdown_indicator'></div>
+        <div id='level_indicator'>
+          LEVEL 2
+        </div>
+      </div>
+      <div id='main'>
+        <table id='game_board'>
+          <tr id='pending_zone'>
+            <td class='pending_zone tile_space' id='pending_zone_column_0'>
+              <span class='tile_number'></span>
+            </td>
+            <td class='pending_zone tile_space' id='pending_zone_column_1'>
+              <span class='tile_number'></span>
+            </td>
+            <td class='pending_zone tile_space' id='pending_zone_column_2'>
+              <span class='tile_number'></span>
+            </td>
+            <td class='pending_zone tile_space' id='pending_zone_column_3'>
+              <span class='tile_number'></span>
+            </td>
+            <td class='pending_zone tile_space' id='pending_zone_column_4'>
+              <span class='tile_number'></span>
+            </td>
+            <td class='pending_zone tile_space' id='pending_zone_column_5'>
+              <span class='tile_number'></span>
+            </td>
+            <td class='pending_zone tile_space' id='pending_zone_column_6'>
+              <span class='tile_number'></span>
+            </td>
+          </tr>
+          <tr id='row_0'>
+            <td class='game_board tile_space' id='row_0_column_0'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_0_column_1'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_0_column_2'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_0_column_3'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_0_column_4'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_0_column_5'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_0_column_6'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+          </tr>
+          <tr id='row_1'>
+            <td class='game_board tile_space' id='row_1_column_0'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_1_column_1'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_1_column_2'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_1_column_3'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_1_column_4'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_1_column_5'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_1_column_6'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+          </tr>
+          <tr id='row_2'>
+            <td class='game_board tile_space' id='row_2_column_0'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_2_column_1'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_2_column_2'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_2_column_3'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_2_column_4'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_2_column_5'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_2_column_6'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+          </tr>
+          <tr id='row_3'>
+            <td class='game_board tile_space' id='row_3_column_0'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_3_column_1'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_3_column_2'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_3_column_3'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_3_column_4'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_3_column_5'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_3_column_6'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+          </tr>
+          <tr id='row_4'>
+            <td class='game_board tile_space' id='row_4_column_0'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_4_column_1'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_4_column_2'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_4_column_3'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_4_column_4'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_4_column_5'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_4_column_6'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+          </tr>
+          <tr id='row_5'>
+            <td class='game_board tile_space' id='row_5_column_0'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_5_column_1'>
+              <span class='tile_number'>
+                6
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_5_column_2'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_5_column_3'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_5_column_4'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_5_column_5'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_5_column_6'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+          </tr>
+          <tr id='row_6'>
+            <td class='game_board tile_space' id='row_6_column_0'>
+              <span class='tile_number'>
+                ?
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_6_column_1'>
+              <span class='tile_number'>
+                6
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_6_column_2'>
+              <span class='tile_number'>
+                ?
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_6_column_3'>
+              <span class='tile_number'>
+                3
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_6_column_4'>
+              <span class='tile_number'>
+                4
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_6_column_5'>
+              <span class='tile_number'>
+                5
+              </span>
+            </td>
+            <td class='game_board tile_space' id='row_6_column_6'>
+              <span class='tile_number'>
+                &nbsp;
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -8,7 +8,7 @@ class HorizontalExplosionsTest < DropXTest
 
     assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, grey, 7]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, grey, nil]"
+    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, grey2, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_6
@@ -18,7 +18,7 @@ class HorizontalExplosionsTest < DropXTest
 
     assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, 6, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, nil, nil]"
+    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey2, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_5
@@ -28,7 +28,7 @@ class HorizontalExplosionsTest < DropXTest
 
     assert_equal @grid[0].inspect, "[grey, grey, grey, grey, 5, nil, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[grey, grey, grey, grey2, nil, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_4
@@ -38,7 +38,7 @@ class HorizontalExplosionsTest < DropXTest
 
     assert_equal @grid[0].inspect, "[grey, grey, grey, 4, nil, nil, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey, nil, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[grey, grey, grey2, nil, nil, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_3
@@ -48,7 +48,7 @@ class HorizontalExplosionsTest < DropXTest
 
     assert_equal @grid[0].inspect, "[grey, grey, 3, nil, nil, nil, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, nil, nil, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[grey, grey2, nil, nil, nil, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_2
@@ -58,7 +58,7 @@ class HorizontalExplosionsTest < DropXTest
 
     assert_equal @grid[0].inspect, "[grey, 2, nil, nil, nil, nil, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, nil, nil, nil, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[grey2, nil, nil, nil, nil, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_1

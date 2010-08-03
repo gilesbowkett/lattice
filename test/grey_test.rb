@@ -9,16 +9,22 @@ class GreyTest < DropXTest
     @ball.advance_state!
     assert @ball.value.is_a?(Fixnum)
   end
+
+  # blowback.html
   def test_blowback
-    # collect all the coordinates for explosions, and then communicate
-    # the blowback to the balls one unit away. grey balls don't change
-    # on explosion; they change on proximity to it.
-    (0..5).each {|column| @grid.insert(Ball.new, column)}
-    @ball.value = 7
-    @grid.insert(@ball, 6)
-  
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, grey, 7]"
+    @grid.insert(Ball.new(:grey), 0)
+    2.times {@grid.insert(Ball.new(6), 1)}
+    @grid.insert(Ball.new(:grey), 2)
+    @grid.insert(Ball.new(3), 3)
+    @grid.insert(Ball.new(4), 4)
+    @grid.insert(Ball.new(5), 5)
+
+    assert_equal @grid.row(1).inspect, "[nil, 6, nil, nil, nil, nil, nil]"
+    assert_equal @grid.row(0).inspect, "[grey, 6, grey, 3, 4, 5, nil]"
+
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, grey2, nil]"
+
+    assert_equal @grid.row(1).inspect, "[nil, nil, nil, nil, nil, nil, nil]"
+    assert_equal @grid.row(0).inspect, "[grey2, 6, grey2, 3, 4, 5, nil]"
   end
 end

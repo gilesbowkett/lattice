@@ -14,12 +14,13 @@ display_grid
 
 while true
   # ball choose/drop UI
-  puts "new number: #{number = rand(7) + 1}" # zero-indexed
+  next_ball = Ball.next
+  puts "new number: #{next_ball.value}" # zero-indexed
   print "column number to drop into? "
 
   # droppity drop drop drop
   column = gets.chomp.to_i - 1
-  @grid.insert(Ball.new(number), column)
+  @grid.insert(next_ball, column)
   display_grid
 
   while(@grid.explode!)
