@@ -6,7 +6,12 @@ include DropX
 
 def display_grid
   puts
-  puts @grid.to_s
+  (0..6).to_a.reverse.each do |index|
+    @grid[index].each do |ball|
+      print "%6s" % ball.inspect
+    end
+    print "\n"
+  end
   puts
 end
 
