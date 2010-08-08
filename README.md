@@ -8,7 +8,7 @@ Many features are not yet supported.
 Tests
 -----
 
-Tests are done in test/unit, because it was fast.
+Tests are done in test/unit, because it was fast. Console mini-game does not have tests but has reached the point where it should. Block hack in grid.rb (for console mini-game UI) also lacks tests.
 
 Structure
 ---------
