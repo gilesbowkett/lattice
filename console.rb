@@ -36,7 +36,7 @@ while true
   @grid.insert(next_ball, column)
   display_grid
 
-  while(@grid.explode!{display_kaboom("SHATTER!!")})
+  while(@grid.explode!{display_kaboom("ANSWER!!!")})
     display_kaboom("KABOOM!!!")
   end
 end
