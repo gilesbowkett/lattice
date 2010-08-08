@@ -18,6 +18,7 @@ module DropX
       when Fixnum
         value
       end)
+      self
     end
 
     class << self

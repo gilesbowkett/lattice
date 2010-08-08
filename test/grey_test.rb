@@ -10,7 +10,7 @@ class GreyTest < DropXTest
     assert @ball.value.is_a?(Fixnum)
   end
 
-  # blowback.html
+  # test/examples/blowback.html
   def test_blowback
     @grid.insert(Ball.new(:grey), 0)
     2.times {@grid.insert(Ball.new(6), 1)}

@@ -13,7 +13,7 @@ class CombinedExplosionsTest < DropXTest
     @b3 = Ball.new(1)
     @grid.insert(@b3, 6)
 
-    # combined_explosion_1.html
+    # test/examples/combined.html
     assert_equal @grid.row(0).inspect, "[grey, grey, grey, grey, grey, 7, 1]"
     assert_equal @grid.row(1).inspect, "[nil, nil, nil, nil, nil, 2, nil]"
 
