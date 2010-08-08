@@ -31,4 +31,11 @@ class CombinedExplosionsTest < DropXTest
     @grid.explode!
     assert_equal @grid.row(0).inspect, "[4, nil, 5, nil, nil, 3, 7]"
   end
+
+  def test_wtf
+    # test/examples/todo.html
+    # the two stacked on the other two blew up; both twos should have blown up, but only the top one did. the
+    # bottom one blew up on a subsequent pass. what should happen is both should have blown up instantly.
+    assert false
+  end
 end
