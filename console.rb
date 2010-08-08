@@ -8,7 +8,7 @@ def display_grid
   puts
   (0..6).to_a.reverse.each do |index|
     @grid[index].each do |ball|
-      print "%6s" % ball.inspect
+      print "%8s" % ball.inspect
     end
     print "\n"
   end
