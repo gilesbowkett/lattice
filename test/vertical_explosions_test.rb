@@ -70,9 +70,10 @@ class VerticalExplosionsTest < DropXTest
     assert_equal @grid.column(0).inspect, "[nil, nil, nil, nil, nil, nil, nil]"
   end
 
-  def test_actual_fuckup_that_happened
+  def test_grey2s
+    grey2 = Ball.new
     [Ball.new(6),
-     Ball.new.advance_state!,
+     grey2.advance_state!,
      Ball.new.advance_state!,
      Ball.new(3),
      Ball.new(2),
@@ -81,5 +82,7 @@ class VerticalExplosionsTest < DropXTest
     end
     # test/examples/column.html
     assert_equal @grid.column(0).inspect, "[6, grey2, grey2, 3, 2, grey, nil]"
+    @grid.explode!
+    assert_equal @grid.column(0).inspect, "[#{grey2.value}, grey2, 3, 2, grey, nil, nil]"
   end
 end
