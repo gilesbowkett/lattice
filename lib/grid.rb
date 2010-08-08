@@ -37,10 +37,10 @@ module DropX
       end
     end
 
-    def explode!
+    def explode!(&block)
       explode_horizontal
       explode_vertical
-      blowback
+      blowback(&block)
       kaboom
       gravity!
 
@@ -80,7 +80,7 @@ module DropX
       end
     end
 
-    def blowback
+    def blowback(&block)
       # collect all the coordinates for explosions, and then communicate
       # the blowback to the balls one unit away. grey balls don't change
       # on explosion; they change on proximity to it.
@@ -93,6 +93,7 @@ module DropX
         @blowback << @grid[row][column + 1] unless 6 == column
       end
       @blowback.compact.uniq.each {|ball| ball.advance_state!}
+      block.call if block_given? and not @blowback.compact.empty?
     end
 
     def clear_column(column_number)

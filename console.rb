@@ -4,6 +4,13 @@ require "lib/dropX.rb"
 include DropX
 @grid = Grid.new
 
+def display_kaboom
+  3.times do
+    3.times {print "   KABOOM!!!          "}
+    puts
+  end
+end
+
 def display_grid
   puts
   (0..6).to_a.reverse.each do |index|
@@ -13,6 +20,11 @@ def display_grid
     print "\n"
   end
   puts
+end
+
+def display_both
+  display_kaboom
+  display_grid
 end
 
 display_grid
@@ -28,12 +40,8 @@ while true
   @grid.insert(next_ball, column)
   display_grid
 
-  while(@grid.explode!)
-    3.times do
-      3.times {print "   KABOOM!!!          "}
-      puts
-    end
-    display_grid
+  while(@grid.explode!{display_both})
+    display_both
   end
 end
 
