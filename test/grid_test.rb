@@ -59,6 +59,6 @@ class GridTest < DropXTest
 
   def test_grid_to_s
     @grid.insert(@ball, 0)
-    assert_equal @grid.to_s, "[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[grey, nil, nil, nil, nil, nil, nil]\n"
+    assert_equal @grid.to_s, "[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[nil, nil, nil, nil, nil, nil, nil]\n[?, nil, nil, nil, nil, nil, nil]\n"
   end
 end

@@ -14,11 +14,11 @@ class CombinedExplosionsTest < DropXTest
     @grid.insert(@b3, 6)
 
     # test/examples/combined.html
-    assert_equal @grid.row(0).inspect, "[grey, grey, grey, grey, grey, 7, 1]"
+    assert_equal @grid.row(0).inspect, "[?, ?, ?, ?, ?, 7, 1]"
     assert_equal @grid.row(1).inspect, "[nil, nil, nil, nil, nil, 2, nil]"
 
     @grid.explode!
-    assert_equal @grid.row(0).inspect, "[grey, grey, grey, grey, grey2, nil, nil]"
+    assert_equal @grid.row(0).inspect, "[?, ?, ?, ?, ??, nil, nil]"
     assert_equal @grid.row(1).inspect, "[nil, nil, nil, nil, nil, nil, nil]"
   end
 

@@ -1,7 +1,7 @@
 module DropX
   class Ball
     attr_accessor :value
-    def initialize(value = :grey)
+    def initialize(value = :"?")
       @value = value
     end
 
@@ -11,9 +11,9 @@ module DropX
 
     def advance_state!
       @value = (case value
-      when :grey
-        :grey2
-      when :grey2
+      when :"?"
+        :"??"
+      when :"??"
         rand(7) + 1
       when Fixnum
         value
@@ -23,8 +23,8 @@ module DropX
 
     class << self
       def next
-        # magic number; I'm just going to say grey balls happen 33% of the time
-        self.new(rand(9) > 2 ? (rand(7) + 1) : :grey)
+        # magic number; I'm just going to say ? balls happen 33% of the time
+        self.new(rand(9) > 2 ? (rand(7) + 1) : :"?")
       end
     end
   end

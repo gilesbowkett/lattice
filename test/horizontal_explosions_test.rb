@@ -6,9 +6,9 @@ class HorizontalExplosionsTest < DropXTest
     @ball.value = 7
     @grid.insert(@ball, 6)
 
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, grey, 7]"
+    assert_equal @grid[0].inspect, "[?, ?, ?, ?, ?, ?, 7]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, grey2, nil]"
+    assert_equal @grid[0].inspect, "[?, ?, ?, ?, ?, ??, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_6
@@ -16,9 +16,9 @@ class HorizontalExplosionsTest < DropXTest
     @ball.value = 6
     @grid.insert(@ball, 5)
 
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey, 6, nil]"
+    assert_equal @grid[0].inspect, "[?, ?, ?, ?, ?, 6, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, grey2, nil, nil]"
+    assert_equal @grid[0].inspect, "[?, ?, ?, ?, ??, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_5
@@ -26,9 +26,9 @@ class HorizontalExplosionsTest < DropXTest
     @ball.value = 5
     @grid.insert(@ball, 4)
 
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey, 5, nil, nil]"
+    assert_equal @grid[0].inspect, "[?, ?, ?, ?, 5, nil, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey, grey2, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[?, ?, ?, ??, nil, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_4
@@ -36,9 +36,9 @@ class HorizontalExplosionsTest < DropXTest
     @ball.value = 4
     @grid.insert(@ball, 3)
 
-    assert_equal @grid[0].inspect, "[grey, grey, grey, 4, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[?, ?, ?, 4, nil, nil, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey, grey2, nil, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[?, ?, ??, nil, nil, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_3
@@ -46,9 +46,9 @@ class HorizontalExplosionsTest < DropXTest
     @ball.value = 3
     @grid.insert(@ball, 2)
 
-    assert_equal @grid[0].inspect, "[grey, grey, 3, nil, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[?, ?, 3, nil, nil, nil, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey, grey2, nil, nil, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[?, ??, nil, nil, nil, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_2
@@ -56,9 +56,9 @@ class HorizontalExplosionsTest < DropXTest
     @ball.value = 2
     @grid.insert(@ball, 1)
 
-    assert_equal @grid[0].inspect, "[grey, 2, nil, nil, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[?, 2, nil, nil, nil, nil, nil]"
     @grid.explode!
-    assert_equal @grid[0].inspect, "[grey2, nil, nil, nil, nil, nil, nil]"
+    assert_equal @grid[0].inspect, "[??, nil, nil, nil, nil, nil, nil]"
   end
 
   def test_uber_basic_explosion_horizontal_1

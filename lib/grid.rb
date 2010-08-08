@@ -82,7 +82,7 @@ module DropX
 
     def blowback(&block)
       # collect all the coordinates for explosions, and then communicate
-      # the blowback to the balls one unit away. grey balls don't change
+      # the blowback to the balls one unit away. ? balls don't change
       # on explosion; they change on proximity to it.
       # refactor later to collect, maybe
       @blowback = []
@@ -92,7 +92,7 @@ module DropX
         @blowback << @grid[row][column - 1] unless 0 == column
         @blowback << @grid[row][column + 1] unless 6 == column
       end
-      shatter = (! @blowback.compact.empty?) && @blowback.inspect =~ /grey/
+      shatter = (! @blowback.compact.empty?) && @blowback.inspect =~ /\?/
       @blowback.compact.uniq.each {|ball| ball.advance_state!}
       block.call if block_given? and shatter
     end
