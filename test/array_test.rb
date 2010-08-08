@@ -15,11 +15,6 @@ class ArrayTest < DropXTest
     assert_equal [4, 4, 4, 4], [4, 4, 4, 4, nil, nil, nil].subsequence(4)
   end
 
-  # def test_multiple_subsequences
-  #   assert_wtf? [4, nil, 4, nil, 4, nil, 4].subsequence(4)
-  #   assert_equal [[1,2], [1,2]] [1,2,nil,1,2,nil,nil].subsequence(2)
-  # end
-
   def test_drop
     assert_equal [1, 2, 3, 4, 5, 6, nil], [nil, 1, 2, 3, 4, 5, 6].drop
     assert_equal [1, 4, 6, nil, nil, nil, nil], [nil, 1, nil, nil, 4, nil, 6].drop
