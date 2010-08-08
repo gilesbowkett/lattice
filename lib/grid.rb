@@ -92,8 +92,9 @@ module DropX
         @blowback << @grid[row][column - 1] unless 0 == column
         @blowback << @grid[row][column + 1] unless 6 == column
       end
+      shatter = (! @blowback.compact.empty?) && @blowback.inspect =~ /grey/
       @blowback.compact.uniq.each {|ball| ball.advance_state!}
-      block.call if block_given? and not @blowback.compact.empty?
+      block.call if block_given? and shatter
     end
 
     def clear_column(column_number)
