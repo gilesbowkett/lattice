@@ -29,8 +29,10 @@ while true
   display_grid
 
   while(@grid.explode!)
-    3.times {print "   KABOOM!!!          "}
-    puts
+    3.times do
+      3.times {print "   KABOOM!!!          "}
+      puts
+    end
     display_grid
   end
 end
