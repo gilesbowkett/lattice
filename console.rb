@@ -1,6 +1,6 @@
 # this is a minimal "game" for play-testing, discovering edge cases, etc.
 
-require "lib/dropX.rb"
+require File.join(File.dirname(__FILE__), "/", "lib/dropX.rb")
 include DropX
 @grid = Grid.new
 
