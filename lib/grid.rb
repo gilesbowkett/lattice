@@ -1,6 +1,5 @@
 module DropX
   class Grid
-    # consider making this an array subclass
     def initialize
       @grid = []
       7.times {@grid << Array.new(7)}
