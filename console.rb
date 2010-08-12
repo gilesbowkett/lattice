@@ -1,8 +1,11 @@
 # this is a minimal "game" for play-testing, discovering edge cases, etc.
 
+# THE WAY FORWARD: refactor this into object, and add tests, before handling scores
+
 require File.join(File.dirname(__FILE__), "/", "lib/dropX.rb")
 include DropX
 @grid = Grid.new
+@chain = 0
 
 def display_kaboom(kaboom)
   3.times do
@@ -28,6 +31,10 @@ display_grid
 while true
   # ball choose/drop UI
   next_ball = Ball.next
+  if 1 < @chain
+    puts "chain! #{@chain}"
+  end
+  @chain = 0
   puts "new number: #{next_ball.value}" # zero-indexed
   print "column number to drop into? "
 
@@ -38,6 +45,7 @@ while true
 
   while(@grid.explode!{display_kaboom("ANSWER!!!")})
     display_kaboom("KABOOM!!!")
+    @chain += 1
   end
 end
 
