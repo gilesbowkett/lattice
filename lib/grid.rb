@@ -36,6 +36,10 @@ module DropX
       end
     end
 
+    def cleared?
+      @grid.flatten.compact.empty?
+    end
+
     def explode!(&block)
       explode_horizontal
       explode_vertical
