@@ -15,6 +15,7 @@ class ConsoleGame
     3.times do
       3.times {print "   #{kaboom}          "}
       puts
+      puts "CLEARED THAT MOTHERFUCKER!!!!" if @grid.cleared?
     end
     display_grid
   end
