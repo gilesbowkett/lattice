@@ -8,11 +8,9 @@ class DropXTest < Test::Unit::TestCase
     @ball = Ball.new
   end
 
-  def test_ball
-    assert @ball
-  end
-
-  def test_grid
-    assert @grid
+  # this is a broken window, but it gets me Test subclasses stupid-quick. (unfortunately putting the stupid
+  # in stupid-quick)
+  def test_true
+    assert true
   end
 end
