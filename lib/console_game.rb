@@ -38,7 +38,8 @@ class ConsoleGame
       # ball choose/drop UI
       next_ball = Ball.next
       if 1 < @score.chain
-        puts "chain! #{@score.chain}"
+        puts "#{@score.chain}-length chain!"
+        puts
       end
       @score.chain = 0
       puts "new number: #{next_ball.value}" # zero-indexed
