@@ -26,26 +26,28 @@ def display_grid
   puts
 end
 
-display_grid
+def play_game
+  while true
+    # ball choose/drop UI
+    next_ball = Ball.next
+    if 1 < @chain
+      puts "chain! #{@chain}"
+    end
+    @chain = 0
+    puts "new number: #{next_ball.value}" # zero-indexed
+    print "column number to drop into? "
 
-while true
-  # ball choose/drop UI
-  next_ball = Ball.next
-  if 1 < @chain
-    puts "chain! #{@chain}"
-  end
-  @chain = 0
-  puts "new number: #{next_ball.value}" # zero-indexed
-  print "column number to drop into? "
+    # droppity drop drop drop
+    column = gets.chomp.to_i - 1
+    @grid.insert(next_ball, column)
+    display_grid
 
-  # droppity drop drop drop
-  column = gets.chomp.to_i - 1
-  @grid.insert(next_ball, column)
-  display_grid
-
-  while(@grid.explode!{display_kaboom("ANSWER!!!")})
-    display_kaboom("KABOOM!!!")
-    @chain += 1
+    while(@grid.explode!{display_kaboom("ANSWER!!!")})
+      display_kaboom("KABOOM!!!")
+      @chain += 1
+    end
   end
 end
 
+display_grid
+play_game
