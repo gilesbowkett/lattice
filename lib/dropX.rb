@@ -2,4 +2,6 @@
    column_overflow
    ball
    grid
-   console_game}.each {|lib| require File.join(File.dirname(__FILE__), "/", lib)}
+   console_game}.each do |lib|
+     require File.join(File.dirname(__FILE__), "/", lib)
+   end
