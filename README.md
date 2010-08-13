@@ -1,9 +1,9 @@
 Lattice
 =======
 
-Lattice is a [Drop7](http://areacodeinc.com/drop7/) clone implemented in Ruby. It includes a very minimal console "game" for dev purposes. Drop7 is awesome and you should [buy it](http://click.linksynergy.com/fs-bin/stat?id=t/y4Q7T5vuU&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fdrop7%252Fid299940763%253Fmt%253D8%2526uo%253D4%2526partnerId%253D30). If you don't know Drop7 and you want to try before you buy, or you can't figure out how the fuck you're supposed to play the console version included here, [check the original Web version in Flash](http://www.chainfactor.com/).
+Lattice is a [Drop7](http://areacodeinc.com/drop7/) clone implemented in Ruby. It includes a very minimal console "game" for dev purposes. Drop7 is awesome and you should [buy it](http://click.linksynergy.com/fs-bin/stat?id=t/y4Q7T5vuU&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fitunes.apple.com%252Fus%252Fapp%252Fdrop7%252Fid299940763%253Fmt%253D8%2526uo%253D4%2526partnerId%253D30). If you don't know Drop7 and you want to try before you buy, or you can't figure out how to play the console version included here, [check the original Web version in Flash](http://www.chainfactor.com/).
 
-Many features are not yet supported. Also, note that by "console game" I mean "console" in the programmer sense, not the gamer sense. It runs on your command line, not an XBox.
+Many features are not yet supported. Also, note that by "console game" I mean "console" in the programmer sense, not the gamer sense. It runs on your command line, not an XBox. Although it could in theory run on an XBox if you installed Linux and Ruby on it first.
 
 Tests
 -----
