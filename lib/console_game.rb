@@ -2,7 +2,7 @@ class ConsoleGame
   # this is a minimal "game" for play-testing, discovering edge cases, etc.
   def initialize
     @grid = Grid.new
-    @store = Score.new
+    @score = Score.new
   end
 
   def go
@@ -37,10 +37,10 @@ class ConsoleGame
     while true
       # ball choose/drop UI
       next_ball = Ball.next
-      if 1 < @store.chain
-        puts "chain! #{@store.chain}"
+      if 1 < @score.chain
+        puts "chain! #{@score.chain}"
       end
-      @store.chain = 0
+      @score.chain = 0
       puts "new number: #{next_ball.value}" # zero-indexed
       print "column number to drop into? "
 
@@ -51,7 +51,7 @@ class ConsoleGame
 
       while(@grid.explode!{display_kaboom("ANSWER!!!")})
         display_kaboom("KABOOM!!!")
-        @store.chain += 1
+        @score.chain += 1
       end
     end
   end
