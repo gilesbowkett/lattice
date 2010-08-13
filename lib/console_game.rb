@@ -1,6 +1,5 @@
 class ConsoleGame
   # this is a minimal "game" for play-testing, discovering edge cases, etc.
-  # some of these methods may travel up into a Game class to enable a web controller. or not.
   def initialize
     @grid = Grid.new
     @chain = 0
