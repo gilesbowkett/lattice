@@ -1,5 +1,5 @@
 %w{array
-   column_overflow
+   exceptions
    ball
    grid
    console_game
