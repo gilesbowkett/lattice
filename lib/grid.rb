@@ -18,6 +18,7 @@ module DropX
     end
 
     def insert(ball, column)
+      raise RowOverflow if column > 6
       @grid.each do |row|
         next unless row[column].nil?
         row[column] = ball

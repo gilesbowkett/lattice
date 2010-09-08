@@ -21,6 +21,12 @@ class GridTest < DropXTest
     end
   end
 
+  def test_row_overflow
+    assert_raise RowOverflow do
+      @grid.insert(@ball, 7)
+    end
+  end
+
   def test_column
     assert_equal @grid.column(0), [nil] * 7
 
