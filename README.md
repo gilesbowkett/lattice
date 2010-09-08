@@ -5,6 +5,11 @@ Lattice is a [Drop7](http://areacodeinc.com/drop7/) clone implemented in Ruby. I
 
 Many features are not yet supported. Also, note that by "console game" I mean "console" in the programmer sense, not the gamer sense. It runs on your command line, not an XBox. Although it could in theory run on an XBox if you installed Linux and Ruby on it first.
 
+Disclaimer
+----------
+
+This project makes no claims as to the awesomeness of its code base. This code may not be awesome.
+
 Tests
 -----
 
@@ -14,8 +19,3 @@ Structure
 ---------
 
 Pretty much all the code lives in the grid, or game board; most of the code works on arrays rather than objects. This was not a conscious decision, and might just be a hangover from writing too much Perl when I was younger. (Ah, the wild days...)
-
-Disclaimer
-----------
-
-This project makes no claims as to the awesomeness of its code base. This code may not be awesome.
